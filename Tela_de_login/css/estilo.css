@@ -6,7 +6,7 @@ body {
     justify-content: center; 
     align-items: center; 
     background-color: aqua; 
-    background-image: url('Tela_de_login/figures/img1.webp'); 
+    background-image: url("Tela_de_login/figures/img1.webp"); 
     background-size: cover; 
     background-position: center;
 }
