@@ -1,0 +1,46 @@
+/* Estiliza o corpo da página */
+body {
+    font-family: Arial, sans-serif; /* Define a fonte do texto */
+    height: 100vh; /* Define a altura da tela como 100% da altura da viewport (tela visível) */
+    display: flex; /* Usa Flexbox para alinhar o conteúdo */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    background-color: aqua; /* Define uma cor de fundo (visível se a imagem não carregar) */
+    background-image: url('img1.webp'); /* Define uma imagem de fundo */
+    background-size: cover; /* Faz a imagem cobrir todo o fundo sem distorcer */
+    background-position: center; /* Centraliza a imagem no fundo */
+}
+
+/* Estiliza o contêiner da tela de login */
+.tela_de_login {
+    background-color: white; /* Fundo branco */
+    padding: 30px 40px; /* Espaçamento interno (topo/baixo: 30px, lados: 40px) */
+    border-radius: 10px; /* Cantos arredondados */
+    box-shadow: 0px 0px 10px #444; /* Sombra ao redor do elemento */
+    text-align: center; /* Centraliza o texto dentro da caixa */
+}
+
+/* Estiliza os campos de entrada (input) dentro da tela de login */
+.tela_de_login input {
+    width: 100%; /* Ocupa toda a largura disponível */
+    padding: 10px; /* Espaçamento interno */
+    margin-bottom: 15px; /* Espaço abaixo de cada campo */
+    border: 1px solid #ccc; /* Borda cinza clara */
+    border-radius: 5px; /* Cantos levemente arredondados */
+}
+
+/* Estiliza o botão dentro da tela de login */
+.tela_de_login button {
+    width: 100%; /* Ocupa toda a largura disponível */
+    padding: 10px; /* Espaçamento interno */
+    background-color: #4CAF50; /* Cor de fundo verde */
+    color: white; /* Cor do texto */
+    border: none; /* Remove a borda padrão */
+    border-radius: 5px; /* Cantos arredondados */
+    cursor: pointer; /* Mostra o cursor de mão ao passar por cima */
+}
+
+/* Altera a cor do botão quando o mouse passa sobre ele */
+.tela_de_login button:hover {
+    background-color: #ccc; /* Um tom de verde um pouco mais escuro */
+}
