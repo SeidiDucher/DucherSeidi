@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <title>Jogo Cara-a-Cara</title>
+
+  <!-- Bootstrap Icons & CSS -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+    crossorigin="anonymous"
+  />
+
+  <!-- Seu CSS customizado -->
+  <link rel="stylesheet" href="/estilo.css" />
+</head>
+
+<body class="bg-light text-dark">
+
+  <!-- Header -->
+  <header class="py-3 bg-primary text-white shadow-sm">
+    <div class="container d-flex justify-content-between align-items-center flex-wrap">
+      <!-- Adversário e vitórias dele -->
+      <div class="d-flex align-items-center gap-4 mb-2 mb-md-0">
+        <i class="bi bi-people-fill fs-3"></i>
+        <div>
+          <div class="small">Adversário</div>
+          <div id="adversario" class="fw-bold fs-5">—</div>
+        </div>
+        <div>
+          <div class="small">Vitórias do adversário</div>
+          <div id="vitoria-ad" class="fw-bold fs-5">0</div>
+        </div>
+      </div>
+      <!-- Título e personagem -->
+      <div class="text-center mb-2 mb-md-0">
+        <h1 class="h4 mb-1">Jogo Cara-a-Cara</h1>
+        <div class="d-flex align-items-center justify-content-center gap-2">
+          <div class="small">Você é:</div>
+          <img
+            id="meuPersonagem"
+            src=""
+            alt="personagem secreto"
+            class="personagem-img"
+          />
+        </div>
+      </div>
+      <!-- Suas vitórias -->
+      <div class="d-flex align-items-center gap-4">
+        <i class="bi bi-person-fill fs-3"></i>
+        <div>
+          <div class="small">Suas Vitórias</div>
+          <div id="vitoria-eu" class="fw-bold fs-5">0</div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container my-4">
+
+    <section class="tabuleiro shadow-sm mb-4">
+      <div class="row g-2 justify-content-center p-3">
+
+        <div class="col-4 col-sm-3 col-md-2 col-lg-1">
+            <div class="board-cell">
+                <img onclick="marcaDesmarca(this)" src="Alessandro.png" alt="Alessandro" />
+            </div>
+        </div>
+
+        <div class="col-4 col-sm-3 col-md-2 col-lg-1">
+            <div class="board-cell">
+                <img onclick="marcaDesmarca(this)" src="Alfredo.png" alt="Alfredo" />
+            </div>
+        </div>
+
+        <div class="col-4 col-sm-3 col-md-2 col-lg-1">
+            <div class="board-cell">
+                <img onclick="marcaDesmarca(this)" src="Anita.png" alt="Anita" />
+            </div>
+        </div>
+
+        <div class="col-4 col-sm-3 col-md-2 col-lg-1">
+            <div class="board-cell">
+                <img onclick="marcaDesmarca(this)" src="Anna.png" alt="Anna" />
+            </div>
+        </div>
+
+        <div class="col-4 col-sm-3 col-md-2 col-lg-1">
+            <div class="board-cell">
+                <img onclick="marcaDesmarca(this)" src="Bernardo.png" alt="Bernardo" />
+            </div>
+        </div>
+
+        <div class="col-4 col-sm-3 col-md-2 col-lg-1">
+            <div class="board-cell">
+                <img onclick="marcaDesmarca(this)" src="Carlo.png" alt="Carlo" />
+            </div>
+        </div>
+
+        <div class="col-4 col-sm-3 col-md-2 col-lg-1">
+            <div class="board-cell">
+                <img onclick="marcaDesmarca(this)" src="Chiara.png" alt="Chiara" />
+            </div>
+        </div>
+
+        <div class="col-4 col-sm-3 col-md-2 col-lg-1">
+            <div class="board-cell">
+                <img onclick="marcaDesmarca(this)" src="Davide.png" alt="Davide" />
+            </div>
+        </div>
+
+        <div class="col-4 col-sm-3 col-md-2 col-lg-1">
+            <div class="board-cell">
+                <img onclick="marcaDesmarca(this)" src="Ernesto.png" alt="Ernesto" />
+            </div>
+        </div>
+
+        <div class="col-4 col-sm-3 col-md-2 col-lg-1">
+            <div class="board-cell">
+                <img onclick="marcaDesmarca(this)" src="Filippo.png" alt="Filippo" />
+            </div>
+        </div>
+
+        <div class="col-4 col-sm-3 col-md-2 col-lg-1">
+            <div class="board-cell">
+                <img onclick="marcaDesmarca(this)" src="Giacomo.png" alt="Giacomo" />
+            </div>
+        </div>
+
+        <div class="col-4 col-sm-3 col-md-2 col-lg-1">
+            <div class="board-cell">
+                <img onclick="marcaDesmarca(this)" src="Giorgio.png" alt="Giorgio" />
+            </div>
+        </div>
+
+        <div class="col-4 col-sm-3 col-md-2 col-lg-1">
+            <div class="board-cell">
+                <img onclick="marcaDesmarca(this)" src="Giuseppe.png" alt="Giuseppe" />
+            </div>
+        </div>
+
+        <div class="col-4 col-sm-3 col-md-2 col-lg-1">
+            <div class="board-cell">
+                <img onclick="marcaDesmarca(this)" src="Guglielmo.png" alt="Guglielmo" />
+            </div>
+        </div>
+
+        <div class="col-4 col-sm-3 col-md-2 col-lg-1">
+            <div class="board-cell">
+                <img onclick="marcaDesmarca(this)" src="Manuele.png" alt="Manuele" />
+            </div>
+        </div>
+
+        <div class="col-4 col-sm-3 col-md-2 col-lg-1">
+            <div class="board-cell">
+                <img onclick="marcaDesmarca(this)" src="Marco.png" alt="Marco" />
+            </div>
+        </div>
+
+        <div class="col-4 col-sm-3 col-md-2 col-lg-1">
+            <div class="board-cell">
+                <img onclick="marcaDesmarca(this)" src="Maria.png" alt="Maria" />
+            </div>
+        </div>
+
+        <div class="col-4 col-sm-3 col-md-2 col-lg-1">
+            <div class="board-cell">
+                <img onclick="marcaDesmarca(this)" src="Paolo.png" alt="Paolo" />
+            </div>
+        </div>
+
+        <div class="col-4 col-sm-3 col-md-2 col-lg-1">
+            <div class="board-cell">
+                <img onclick="marcaDesmarca(this)" src="Pietro.png" alt="Pietro" />
+            </div>
+        </div>
+
+        <div class="col-4 col-sm-3 col-md-2 col-lg-1">
+            <div class="board-cell">
+                <img onclick="marcaDesmarca(this)" src="Riccardo.png" alt="Riccardo" />
+            </div>
+        </div>
+
+        <div class="col-4 col-sm-3 col-md-2 col-lg-1">
+            <div class="board-cell">
+                <img onclick="marcaDesmarca(this)" src="Roberto.png" alt="Roberto" />
+            </div>
+        </div>
+
+        <div class="col-4 col-sm-3 col-md-2 col-lg-1">
+            <div class="board-cell">
+                <img onclick="marcaDesmarca(this)" src="Samuele.png" alt="Samuele" />
+            </div>
+        </div>
+
+        <div class="col-4 col-sm-3 col-md-2 col-lg-1">
+            <div class="board-cell">
+                <img onclick="marcaDesmarca(this)" src="Susanna.png" alt="Susanna" />
+            </div>
+        </div>
+        
+        <div class="col-4 col-sm-3 col-md-2 col-lg-1">
+            <div class="board-cell">
+                <img onclick="marcaDesmarca(this)" src="Tommaso.png" alt="Tommaso" />
+            </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Mensagens -->
+    <section class="mensagens mb-4">
+      <div class="card">
+        <div class="card-header bg-secondary text-white">
+          Mensagens
+        </div>
+        <div class="card-body">
+          <label for="msgRecebida" class="form-label">Recebidas:</label>
+          <textarea
+            readonly
+            class="form-control mb-3"
+            id="msgRecebida"
+            rows="4"
+          ></textarea>
+
+          <label for="msg" class="form-label">Enviar:</label>
+          <div class="input-group mb-3">
+            <input
+              id="msg"
+              type="text"
+              class="form-control"
+              placeholder="Digite sua mensagem..."
+            />
+            <button class="btn btn-primary" onclick="enviaPergunta()">
+              <i class="bi bi-send"></i>
+            </button>
+          </div>
+
+          <button
+            class="btn btn-danger"
+            data-bs-toggle="modal"
+            data-bs-target="#confirma"
+          >
+            <i class="bi bi-x-circle"></i> Encerrar
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Palpite Final -->
+    <section class="palpite-final text-center mb-5">
+      <div class="input-group justify-content-center">
+        <input
+          id="palpite"
+          type="text"
+          class="form-control w-auto"
+          placeholder="Nome do personagem"
+        />
+        <button class="btn btn-success" onclick="fazerPalpite()">
+          <i class="bi bi-check-circle"></i> Palpitar
+        </button>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Modal de confirmação -->
+  <div
+    class="modal fade"
+    id="confirma"
+    tabindex="-1"
+    aria-labelledby="confirmaLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog">
+      <div class="modal-content rounded-3 shadow-sm">
+        <div class="modal-header bg-danger text-white">
+          <h5 class="modal-title" id="confirmaLabel">Encerrar partida</h5>
+          <button
+            type="button"
+            class="btn-close btn-close-white"
+            data-bs-dismiss="modal"
+          ></button>
+        </div>
+        <div class="modal-body">
+          Tem certeza de que deseja encerrar esta partida?
+        </div>
+        <div class="modal-footer">
+          <button
+            type="button"
+            class="btn btn-outline-secondary"
+            data-bs-dismiss="modal"
+          >
+            Cancelar
+          </button>
+          <button
+            type="button"
+            class="btn btn-danger"
+            data-bs-dismiss="modal"
+            onclick="reinicia()"
+          >
+            Confirmar
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sockets e Bootstrap JS -->
+  <script src="/socket.io/socket.io.js"></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"
+  ></script>
+  <!-- Seu app.js com marcaDesmarca(), reInicia() etc. -->
+  <script src="/app.js"></script>
+
+  <!-- Script principal -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const socket = io();
+      const meuNome = sessionStorage.getItem('meuNome');
+      const oponente = sessionStorage.getItem('oponente');
+      const personagem = sessionStorage.getItem('personagem');
+      let vitoriasEu = sessionStorage.getItem("vitoriasEu");
+      let vitoriasAd = sessionStorage.getItem("vitoriasAd");
+
+      const imgPersonagem   = document.getElementById('meuPersonagem');
+      const spanAdversario  = document.getElementById('adversario');
+      const spanVitoriaAd   = document.getElementById('vitoria-ad');
+      const spanVitoriaEu   = document.getElementById('vitoria-eu');
+      const textareaMsgs    = document.getElementById('msgRecebida');
+      const inputMsg        = document.getElementById('msg');
+      const inputPalpite    = document.getElementById('palpite');
+
+      // UI inicial
+      imgPersonagem.src        = personagem || '';
+      spanAdversario.textContent = oponente || '—';
+      spanVitoriaEu.textContent = vitoriasEu;
+      spanVitoriaAd.textContent = vitoriasAd;
+      socket.emit('registrar', meuNome);
+
+      // Helpers
+      const appendMessage = msg => {
+        textareaMsgs.value += msg + '\n';
+        textareaMsgs.scrollTop = textareaMsgs.scrollHeight;
+      };
+      function showToast(message, type = 'info') {
+        const toastEl = document.createElement('div');
+        toastEl.className = `toast align-items-center text-bg-${type} border-0 position-fixed top-0 end-0 m-3`;
+        toastEl.role = 'alert';
+        toastEl.innerHTML = `
+          <div class="d-flex">
+            <div class="toast-body">${message}</div>
+            <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"></button>
+          </div>`;
+        document.body.append(toastEl);
+        const toast = new bootstrap.Toast(toastEl, { delay: 3000 });
+        toast.show();
+        toastEl.addEventListener('hidden.bs.toast', () => toastEl.remove());
+      }
+
+      // Envio de mensagem
+      const enviaPergunta = () => {
+        const texto = inputMsg.value.trim();
+        if (!texto) return;
+        socket.emit('mensagem', { de: meuNome, para: oponente, texto });
+        appendMessage(`Você: ${texto}`);
+        inputMsg.value = '';
+        inputMsg.focus();
+      };
+      const fazerPalpite = () => {
+        const chute = inputPalpite.value.trim();
+        if (!chute) return showToast('Informe seu palpite!', 'warning');
+        socket.emit('palpite', { de: meuNome, para: oponente, chute });
+      };
+
+      const Reiniciar = () => {
+        const chute = inputPalpite.value.trim();
+        if (!chute) return showToast('Informe seu palpite!', 'warning');
+        socket.emit('palpite', { de: meuNome, para: oponente, chute });
+      };
+
+      // Atalhos Enter
+      inputMsg.addEventListener('keyup', e => { if (e.key === 'Enter') enviaPergunta(); });
+      inputPalpite.addEventListener('keyup', e => { if (e.key === 'Enter') fazerPalpite(); });
+
+      window.enviaPergunta = enviaPergunta;
+      window.fazerPalpite = fazerPalpite;
+
+      socket.on('mensagem', ({ de, texto }) => {
+        if (de === meuNome) return;
+        appendMessage(`${de}: ${texto}`);
+      });
+
+      socket.on('venceu', ({ mensagem, vitoria, derrota }) => {
+        // Atualiza placar
+        spanVitoriaEu.textContent = vitoria;
+        spanVitoriaAd.textContent = derrota;
+        // Exibe aviso: toast e alert
+        showToast(`${mensagem}: ${vitoria} x ${derrota}`, 'success');
+        alert(`${mensagem}: ${vitoria} x ${derrota}`);
+      });
+      socket.on('disconnect', () => showToast('Conexão perdida. Reconectando...', 'danger'));
+      socket.io.on('reconnect', () => {
+        socket.emit('registrar', meuNome);
+        showToast('Reconectado ao servidor.', 'info');
+      });
+
+      socket.on('fim', () => {
+        socket.emit('fimSessao', { de: meuNome, para: oponente });
+        sessionStorage.clear(); window.location.href = "/dashboard"; 
+      });
+
+      window.reinicia = () => {
+        socket.emit('fimJogo', { de: meuNome, para: oponente });
+      };
+    });
+  </script>
+</body>
+
+</html>
