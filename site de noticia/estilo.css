@@ -69,3 +69,37 @@ body.fotos #navegacao a#fotos{
     background: #de003e;
     cursor: text;
 } 
+
+/*configuração de layout de tres colunas*/
+#conteudo{
+    margin-top: 60px;
+    background: #f5f5f5;
+}
+
+#primario{
+    width: 270px;
+    margin: 0 0 20px 195px;
+    background: blue;
+    float: left;
+}
+#segundario{
+    width: 270px;
+    margin: 0 0 20px 15px;
+    background: green;
+    float: left;
+}
+#lateral{
+    width: 180px; 
+    margin: 0 0 20px -750px;
+    background: red;
+    float: left;
+}
+
+#rodape{
+    clear: both;
+    height: 50px;
+    background: #b10333;
+    color: #fff;
+    text-align: center;
+    line-height: 50px;
+}
