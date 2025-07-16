@@ -28,14 +28,23 @@ const cidade = "Sao Paulo"; // tipo string (const)
 const ativo = true; // tipo boolean (const)
 
 // Exibindo os valores no console
-document.write(nome + "<br>");
+document.write("Nome: " + nome + "<br>");
 document.write(idade + "<br>");
 
 // Exibindo os valores no console, e usando concatenacao
 console.log("Cidade: " + cidade);
-console.log("Nome:" +nome);
+console.log("Nome:" + nome);
 console.log("Idade: " + idade);
 
 // Lendo o valor de uma variavel de um usuario
 let nomeUsuario = prompt("Digite seu nome: ");
 document.write("Nome do usuario: " + nomeUsuario + "<br>");
+
+// null é ausencia de valor, undefined é quando a variavel nao foi declarada
+var nulo = null; // tipo null
+var indefinido; // tipo undefined
+var teste2 = undefined; // tipo undefined
+
+// Alterando o valor de uma variavel
+nome =  "Ducher Seidi Alterado"; // alterando o valor da variavel nome
+document.write("Nome alterado: " + nome + "<br>");
