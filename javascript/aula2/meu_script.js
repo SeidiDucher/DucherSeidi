@@ -35,3 +35,7 @@ document.write(idade + "<br>");
 console.log("Cidade: " + cidade);
 console.log("Nome:" +nome);
 console.log("Idade: " + idade);
+
+// Lendo o valor de uma variavel de um usuario
+let nomeUsuario = prompt("Digite seu nome: ");
+document.write("Nome do usuario: " + nomeUsuario + "<br>");
