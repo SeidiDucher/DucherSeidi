@@ -1,7 +1,10 @@
 // Operadores de comparação
-const a = 5;
-const b = 10;
+const a = prompt("Digite um número: ");
+const b = prompt("Digite outro número: ");
 
 if (a < b){
-    docum
+    document.write("O número " + a + " é menor que " + b);
+}
+else{
+    document.write("O número " + a + " não é menor que " + b);
 }
