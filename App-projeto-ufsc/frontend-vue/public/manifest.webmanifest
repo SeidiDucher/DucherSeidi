@@ -1,0 +1,15 @@
+{
+  "short_name": "Feira",
+  "name": "Feira de Ciências Interativa",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "description": "Veja projetos, vote e explore a feira!",
+  "icons": [
+  {
+    "src": "/icon-160.png",
+    "sizes": "192x192",
+    "type": "image/png"
+  }
+]
+}
