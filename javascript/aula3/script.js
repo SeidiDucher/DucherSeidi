@@ -8,3 +8,4 @@ if (a < b){
 else{
     document.write("O número " + a + " não é menor que " + b);
 }
+
