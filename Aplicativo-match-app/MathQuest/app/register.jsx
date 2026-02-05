@@ -94,7 +94,7 @@ export default function RegisterScreen() {
               onPress={() => setSelectedGrade(grade)}
             >
               <Text style={[styles.gradeText, { color: selectedGrade === grade ? '#FFFFFF' : theme.text }]}>{grade}</Text>
-              <Text style={[styles.gradeSubtext, { color: selectedGrade === grade ? '#FFFFFF' : theme.subtext }]}>Fund.</Text>
+              <Text style={[styles.gradeSubtext, { color: selectedGrade === grade ? '#FFFFFF' : theme.subtext }]}>ano</Text>
             </TouchableOpacity>
           ))}
         </View>
@@ -133,20 +133,15 @@ const styles = StyleSheet.create({
   },
   scrollContent: { 
     padding: 25,
+    paddingTop: 0,
     paddingBottom: 40,
   },
   title: { 
     fontSize: 32, 
     fontWeight: 'bold', 
     textAlign: 'center',
-    marginBottom: 10,
-  },
-  description: { 
-    fontSize: 14, 
-    textAlign: 'center', 
-    marginBottom: 30, 
-    marginTop: 5,
-    lineHeight: 20,
+    marginBottom: 20,
+    marginTop: 0,
   },
   inputGroup: { 
     marginBottom: 20 

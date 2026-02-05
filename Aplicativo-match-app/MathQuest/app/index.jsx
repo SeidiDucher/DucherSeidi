@@ -96,13 +96,11 @@ const styles = StyleSheet.create({
   container: {
     alignItems: "center",
     paddingHorizontal: 28,
-    paddingTop: 24,
     paddingBottom: 40,
   },
   hero: {
     width: 200,
     height: 230,
-    marginTop: 30,
     borderRadius: 16,
   },
   title: {
